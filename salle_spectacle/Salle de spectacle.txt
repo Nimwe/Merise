@@ -1,0 +1,48 @@
+***** Salle de spectacle ****
+
+1 - Attention à l'inversion des cardinalités.
+-> ok
+
+2 - Une salle peut-elle accueillir plusieurs spectacle ?
+cdc => Une salle propose plusieurs spectacles.
+-> oui - 1,n
+
+3 - Est-il possible d'avoir des types de spectacle non encore rattachés à un spectacle ?
+-> le type existe indépendamment de si le spectacle existe - 0,n
+
+4 - Pourquoi avons-nous "id_salle" ?
+-> Parce qu'un spectacle est rattaché à une salle 
+
+5 - Pourquoi avons-nous "id_spectacle" ?
+-> Parce qu'une représentation correspond à un spectacle 
+
+6 - A quoi correspond le booléen "equipe_technique" ? Comment stocker les membres d'une équipe ?
+cdc => Dans le cas d’une pièce de théâtre on stockera également les comédien.nes et l’équipe technique
+-> Savoir si il y a des comédiens et une équipe technique. Je suis partie du postulat que la il fallait juste savoir si il y avait besoin de ces équipe qu'une autre bdd gérait tout le personnel des salles avec donc les infos complètes 
+
+7 - Comment savoir quelle représentation concerne la réservation ?
+Ne  faudrait-il pas un lien entre réservation et représentation ?
+-> via voir entre le spectateur et la représentation 
+
+8 - Que va contenir cette table au final ?
+Est-ce que le fait d'avoir 2 colonnes est nécessaire ?
+Indice : simuler le contenu de table pour voir la redondance d'information.
+-> savoir si le tel ou le mail est true 
+Pour les stats ? 
+on peut la retirer et mettre des booléens dans réservation peut être 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
